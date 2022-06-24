@@ -1,4 +1,4 @@
-# Milestone Project 2: Blackjack
+# :black_joker: Milestone Project 2: Blackjack
 
 Rules of the game: https://en.wikipedia.org/wiki/Blackjack
 
