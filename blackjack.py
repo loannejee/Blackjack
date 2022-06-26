@@ -1,4 +1,5 @@
 import random
+import services
 
 # Global variables:
 suits = ('Hearts', 'Diamonds', 'Spades', 'Clubs')
@@ -63,8 +64,8 @@ class Hand:
 # Chips Class ===================================================
 class Chips:
     
-    def __init__(self):
-        self.total = 100  # This can be set to a default value or supplied by a user input
+    def __init__(self, total=100):
+        self.total = total  # This can be set to a default value or supplied by a user input
         self.bet = 0
         
     def win_bet(self):
