@@ -38,32 +38,48 @@ def hit_or_stand(deck, hand):
 
 
 def show_some(player,dealer):
+    print("\nDealer's Hand:")
+    # The first card:
+    print(" <card hidden>")
+    # Rest of the hand
+    print('',dealer.cards[1])  
+    print("\nPlayer's Hand:", *player.cards, sep='\n ')
     
-    pass
-    
+
 def show_all(player,dealer):
-    
-    pass
+    print("\nDealer's Hand:", *dealer.cards, sep='\n ')
+    print("Dealer's Hand =",dealer.value)
+    print("\nPlayer's Hand:", *player.cards, sep='\n ')
+    print("Player's Hand =",player.value)
 
-def player_busts():
-    pass
 
-def player_wins():
-    pass
+def player_busts(player,dealer,chips):
+    print("Player busts!")
+    chips.lose_bet()
 
-def dealer_busts():
-    pass
+
+def player_wins(player,dealer,chips):
+    print("Player wins!")
+    chips.win_bet()
+
+
+def dealer_busts(player,dealer,chips):
+    print("Dealer busts!")
+    chips.win_bet()
+
+
+def dealer_wins(player,dealer,chips):
+    print("Dealer wins!")
+    chips.lose_bet()
     
-def dealer_wins():
-    pass
-    
+
 def push():
-    pass
+    print("Dealer and Player tie! It's a push.")
 
 
 if __name__ == "__main__":
-	print("Functions are run directly.")
+	print("Functions are running directly.")
 else:
 	print("Functions are being imported from 'services' module.")
 
-    
+
